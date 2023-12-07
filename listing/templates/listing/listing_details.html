@@ -1,0 +1,15 @@
+{% extends 'listing/layout.html' %}
+
+{% block content %}
+<h1> {{listing.title | upper }}</h1>
+<!-- TODO : liste des groupes -->
+<ul>
+    <li> Type : {{listing.type}} </li>
+    <li> Groupe: {{listing.band}} </li>
+    <h3> Description</h3>
+    <p> {{listing.description}} </p>
+</ul>
+<a href="{% url 'listings' %}">Retour</a>
+<a href="{% url 'listing_update' listing.id %}">Modifier</a>
+<a href="{% url 'listing_delete' listing.id %}">Supprimer</a>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'listing/layout.html' %}
+
+{% block content %}
+<h1>Liste des groupes</h1>
+<!-- TODO : liste des groupes -->
+<a href="{% url 'band_create' %}">Ajouter un groupe</a>
+<ul>
+    {% for b in bands %}
+    <li><a href="{% url 'band_details' b.id %}">{{ b.name | upper }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

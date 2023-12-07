@@ -1,0 +1,12 @@
+{% extends 'listing/layout.html' %}
+
+{% block content %}
+<h1>Liste des articles</h1>
+<!-- TODO : liste des articles -->
+<a href="{% url 'listing_create' %}"> Ajouter un article</a>
+<ul>
+    {% for l in listings %}
+    <li><a href="{% url 'listing_details' l.id %}">{{ l.title | upper }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

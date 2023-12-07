@@ -1,0 +1,12 @@
+{% extends 'listing/layout.html' %}
+
+{% block content %}
+<h1>Créer un groupe</h1>
+<!-- TODO : liste des groupes -->
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <input type="submit" value="Créer" />
+</form>
+{% endblock %}
